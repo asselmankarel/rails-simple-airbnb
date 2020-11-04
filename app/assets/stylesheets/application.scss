@@ -14,3 +14,12 @@
  *= require_self
  */
 @import "bootstrap/scss/bootstrap";
+img {
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.img-banner {
+  height: 300px;
+}

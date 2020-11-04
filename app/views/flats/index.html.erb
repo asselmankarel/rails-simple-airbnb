@@ -1,18 +1,26 @@
-<h1 class="my-3">All our flats (<%= @flats.size %>)</h1>
+<div class="container">
+  <h1 class="my-3">All our flats (<%= @flats.size %>)</h1>
 
-<div class="row">
-  <% @flats.each do |flat| %>
-    <div class="col-lg-3 col-md-4 col-sm-6">
-      <div class="card shadow-sm my-2">
-        <div class="card-body bg-light">
-          <h5 class="card-title"><%= flat.name %></h5>
-          <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h6>
-          <p class="card-text"><%= flat.description %></p>
-          <p class="card-text"><i class="fas fa-euro-sign"></i> <%= flat.price_per_night %> <i class="fas fa-user-friends"></i> <%= flat.number_of_guests %></p>
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card shadow-sm my-2">
+        <img src="https://source.unsplash.com/random/300x200" alt="">
+          <div class="card-body bg-light">
+            
+            <h5 class="card-title"><%= flat.name %></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h6>
+            <p class="card-text"><%= flat.description %></p>
+            <p class="card-text"><i class="fas fa-euro-sign"></i> <%= flat.price_per_night %> <i class="fas fa-user-friends"></i> <%= flat.number_of_guests %></p>
+          </div>
+          <ul class="list-inline mt-2 mx-auto">
+            <li class="list-inline-item"><%= link_to 'More info', flat_path(flat), class: "card-link p-1" %></li>
+            <li class="list-inline-item"><%= link_to 'Edit', edit_flat_path(flat), class: "card-link text-warning p-1" %></li>
+            <li class="list-inline-item"><%= link_to 'Delete', flat_path(flat), class: "card-link text-danger p-1", method: :delete %></li>
+          </ul>
+          
         </div>
-        <%= link_to 'More info', flat_path(flat), class: "card-link p-2" %>
-        
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

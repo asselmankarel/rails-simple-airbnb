@@ -1,19 +1,32 @@
-<div class="map">
-</div>
 
-<div class="container">
-  <div class="flat-show-card bg-light shadow-sm rounded">
-    <h1><%= @flat.name %></h1>
-    <p><%= @flat.address %></p>
-  </div>
+<img src="https://images.pexels.com/photos/681331/pexels-photo-681331.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="img-banner"> 
 
-  <div class="flat-show-card bg-light shadow-sm rounded">
-    <h2>A bit more about this flat</h2>
-    <p><%= @flat.description %></p>
-  </div>
+<div class="container mt-n5">
+  <div class="row">
+    <div class="col-8">
+      <div class="flat-show-card bg-light shadow-sm rounded p-2 mb-3">
+        <h1><%= @flat.name %></h1>
+        <p><%= @flat.address %></p>
+      </div>
 
-  <div class="flat-show-card bg-light shadow-sm rounded">
-    <h2>Details</h2>
-    <p><i class="fas fa-euro-sign"></i> <%= flat.price_per_night %> <i class="fas fa-user-friends"></i> <%= flat.number_of_guests %></p>
+      <div class="flat-show-card bg-light shadow-sm rounded p-2 mb-3">
+        <h2>A bit more about this flat</h2>
+        <p><%= @flat.description %></p>
+      </div>
+
+      <div class="flat-show-card bg-light shadow-sm rounded p-2 mb-3">
+        <h2>Details</h2>
+        <p><i class="fas fa-euro-sign"></i> <%= @flat.price_per_night %> <i class="fas fa-user-friends"></i> <%= @flat.number_of_guests %></p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="flat-show-card bg-light shadow-sm rounded p-2 mb-3">
+        <p>booking form</p>
+      </div>
+      <div class="flat-show-card bg-light shadow-sm rounded p-2">
+        <p>share </p>
+      </div>
+
+    </div>
   </div>
 </div>
